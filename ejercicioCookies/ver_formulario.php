@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="" method="post">
+    <form action="" method="">
         <label for="a">Languaje</label>
         <select name="lang" id="">
             <optgroup label="lang"></optgroup>
@@ -24,7 +24,7 @@
         <input type="color" name="" id="" value="#ff0000">
     </form>
     <?php
-    if (isset($_POST)) {
+    if (isset($_COOKIE)) {
         
      }
 
