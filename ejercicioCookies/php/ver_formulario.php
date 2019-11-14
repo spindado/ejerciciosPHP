@@ -13,18 +13,16 @@
 <body>
 
 
-    <?php
-    echo <<< HDR
     <div class="container">
         <h1>Elige la preconfiguracion del usuario</h1>
         <form action="setcookies.php" method="post">
             <fieldset>
-                <label for="a">Languaje</label>
+                <label for="">Languaje</label>
                 <select name="lang" id="">
                     <option value="es">es</option>
                     <option value="ing">ing</option>
                 </select>
-                <label for="b">Background-color</label>
+                <label for="">Background-color</label>
                 <select name="back-color" id="">
                     <option value="white">white</option>
                     <option value="green">green</option>
@@ -32,7 +30,7 @@
                     <option value="red">red</option>
                 </select>
 
-                <label for="c">Font-color</label>
+                <label for="">Font-color</label>
                 <select name="font-color" id="">
                     <option value="black">black</option>
                     <option value="white">white</option>
@@ -45,6 +43,8 @@
         </form>
 
     </div>
+    <?php
+    echo <<< HDR
     
 HDR;
     ?>
