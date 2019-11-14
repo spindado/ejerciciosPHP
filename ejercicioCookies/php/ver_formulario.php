@@ -11,7 +11,13 @@
 
 <body>
 
+
+
+    <?php
+    echo <<< HDR
+    
     <div class="container">
+        <h1>Elige la preconfiguracion del usuario</h1>
         <form action="" method="">
             <fieldset>
                 <label for="a">Languaje</label>
@@ -19,9 +25,6 @@
                     <option value="">es</option>
                     <option value="">ing</option>
                 </select>
-
-            </fieldset>
-            <fieldset>
                 <label for="b">Background-color</label>
                 <select name="back-color" id="">
                     <option value="">white</option>
@@ -30,8 +33,6 @@
                     <option value="">red</option>
                 </select>
 
-            </fieldset>
-            <fieldset>
                 <label for="c">Font-color</label>
                 <select name="font-color" id="">
                     <option value="">black</option>
@@ -39,15 +40,13 @@
                     <option value="">blue</option>
                 </select>
 
+                <input type="submit" value="Enviar">
+
             </fieldset>
         </form>
 
     </div>
-
-
-    <?php
-    if (isset($_COOKIE)) { }
-
+HDR;
     ?>
 
 </body>
