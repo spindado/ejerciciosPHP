@@ -9,43 +9,43 @@
     <title>Document</title>
 </head>
 
-<body>
 
+<body>
 
 
     <?php
     echo <<< HDR
-    
     <div class="container">
         <h1>Elige la preconfiguracion del usuario</h1>
-        <form action="" method="">
+        <form action="setcookies.php" method="post">
             <fieldset>
                 <label for="a">Languaje</label>
                 <select name="lang" id="">
-                    <option value="">es</option>
-                    <option value="">ing</option>
+                    <option value="es">es</option>
+                    <option value="ing">ing</option>
                 </select>
                 <label for="b">Background-color</label>
                 <select name="back-color" id="">
-                    <option value="">white</option>
-                    <option value="">green</option>
-                    <option value="">black</option>
-                    <option value="">red</option>
+                    <option value="white">white</option>
+                    <option value="green">green</option>
+                    <option value="black">black</option>
+                    <option value="red">red</option>
                 </select>
 
                 <label for="c">Font-color</label>
                 <select name="font-color" id="">
-                    <option value="">black</option>
-                    <option value="">white</option>
-                    <option value="">blue</option>
+                    <option value="black">black</option>
+                    <option value="white">white</option>
+                    <option value="blue">blue</option>
                 </select>
 
-                <input type="submit" value="Enviar">
+                <input type="submit" name="submit" value="Enviar">
 
             </fieldset>
         </form>
 
     </div>
+    
 HDR;
     ?>
 

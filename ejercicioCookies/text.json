@@ -1,0 +1,44 @@
+{
+  "es": {
+    "title": {
+      "label": "Selecciona tu configuraci\u00f3n"
+    },
+    "select": {
+      "label": "Idioma:",
+      "options": {
+        "es": "Espa\u00f1ol",
+        "en": "Ingles"
+      }
+    },
+    "font": {
+      "label": "Color de fuente:"
+    },
+    "background": {
+      "label": "Color de fondo:"
+    },
+    "submit": {
+      "label": "Guardar"
+    }
+  },
+  "en": {
+    "title": {
+      "label": "Select your settings"
+    },
+    "select": {
+      "label": "Language:",
+      "options": {
+        "en": "English",
+        "es": "Spanish"
+      }
+    },
+    "font": {
+      "label": "Font color:"
+    },
+    "background": {
+      "label": "Background color:"
+    },
+    "submit": {
+      "label": "Save"
+    }
+  }
+}
