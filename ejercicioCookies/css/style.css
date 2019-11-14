@@ -1,0 +1,9 @@
+body {
+  background-color: rgb(235, 235, 235);
+}
+.container {
+  width: 50%;
+  position: relative;
+  left: 25%;
+  float: left;
+}
