@@ -1,0 +1,9 @@
+.textBox {
+  width: 540px;
+  height: 200px;
+  border: 1px #000000 solid;
+  overflow: scroll;
+}
+#toolBar1 {
+  font-size: 10px;
+}

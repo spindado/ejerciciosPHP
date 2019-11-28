@@ -1,0 +1,9 @@
+.img {
+  background-image: url(../img/-T-GjUWPW-oI-unsplash.jpg);
+  background-color: blue;
+}
+.box-prymary {
+  width: 100px;
+  height: 100px;
+  border: solid 1px black;
+}

@@ -1,0 +1,8 @@
+.calendar-day,
+.calendar-day-head {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+.calendar-day-head {
+  background: #ddd;
+}
