@@ -11,7 +11,7 @@
 
       
       <div id="login-form">
-            <form action="" method="post">
+            <form action="$_SERVER[PHP_SELF]" method="post">
                   <table>
                         <tr>
                               <td>
