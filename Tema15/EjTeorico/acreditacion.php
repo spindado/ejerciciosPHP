@@ -5,7 +5,7 @@
     if(isset($_REQUEST['identificativo']) && isset($_REQUEST['clave'])){//¿Ha rellenado el formulario?
         if($_REQUEST['identificativo']=='juanfe' && $_REQUEST['clave']='secreto'){//Son correctas las credenciales
             $_SESSION['identificativo']=$_REQUEST['identificativo'];
-            header('Location: informacion.php'.SID);
+            header('Location: informacion.php');
         }else{ //No son correctas las credenciales
             header('Location: acreditacion.php');
         }
@@ -21,6 +21,6 @@
         echo '</form>';
     }
 }else{//Sí está ya acreditado
-    header('Location: informacion.php'.SID);
+    header('Location: informacion.php');
 }
 ?>

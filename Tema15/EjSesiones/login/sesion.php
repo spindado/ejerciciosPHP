@@ -8,11 +8,11 @@
      //destruimos los datos de la sesión en el script actual
      session_destroy();
      //redirigimos a la página de acreditación
-     header('Location: acreditacion.php');
+     header('Location: login.php');
  }
- if (!isset($_SESSION['identificativo'])){
-     header('Location: acreditacion.php');
+ if (!isset($_SESSION['uname'])){
+     header('Location: login.php');
  }
- echo '<a href="informacion.php?terminar_sesion=1">Terminar sesion</a><br />';
+ echo '<a href="sesion.php?terminar_sesion=1">Terminar sesion</a><br />';
  echo '<a href="http://www.google.es">GOOGLE</a>';
  ?>
