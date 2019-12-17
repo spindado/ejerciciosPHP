@@ -15,7 +15,7 @@ spl_autoload_register(function ($className){
 
 <body>
     <?php 
-    $header = new MiCabecera("Esto esun header");
+    $header = new MiCabecera("Esto es un header");
     echo $header;
 ?>
 
