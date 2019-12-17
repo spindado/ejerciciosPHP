@@ -6,6 +6,10 @@
             $this->text = $text;
         }
 
+        public function getText(){
+            return $this->text;
+        }
+
 
         public function __toString(){
             return "<header>" .$this->text."</header>";
