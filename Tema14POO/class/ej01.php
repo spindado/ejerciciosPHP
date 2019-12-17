@@ -1,8 +1,3 @@
-<?php 
-spl_autoload_register(function ($className){
-    include __DIR__ . '/class' . $className . '.php' ;
-});
-?>
 <!DOCTYPE html>
 <html lang="en">
 
