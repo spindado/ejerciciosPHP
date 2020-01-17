@@ -1,37 +1,44 @@
-create database if no exists bookstore;
+create database if not exists bookstore;
 use bookstore;
+CREATE TABLE book (
+    id INT(10) AUTO_INCREMENT PRIMARY KEY,
+    isbn VARCHAR(13) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    stock SMALLINT(5)  NOT NULL,
+    price FLOAT NOT NULL
+) engine='Innodb';
 
-CREATE TABLE book(
-    ID int(10) PRIMARY KEY,
-    isbn VARCHAR(13),
-    title VARCHAR(255),
-    author VARCHAR(255),
-    stock SMALLINT(5),
-    price FLOAT
-)engine="Imnodb"
-
-CREATE TABLE customer(
-    ID INT(10) PRIMARY KEY,
-    firstname VARCHAR(255),
+CREATE TABLE customer (
+    id INT(10) AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(255) NOT NULL,
     surname VARCHAR(255),
     email VARCHAR(255),
-    type enum('basic','premium')    
-)engine="Imnodb"
+    type ENUM('basic','premium') 
+) engine='Innodb';
 
-CREATE TABLE sale(
-    id INT(10),
-    customer_id INT(10),--FK de tabla customer
-    datte datetime,
-    indexcustomer_0
-)engine="Imnodb"
+CREATE TABLE sale (
+    id INT(10) AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT(10),
+    date DATETIME,
+    FOREIGN KEY(customer_id) REFERENCES customer(id) ON UPDATE CASCADE ON DELETE CASCADE  
+) engine='Innodb';
 
-CREATE TABLE borrowed_books(
-    customer_id INT(10),--FK de tabla customer
-    book_id INT(10),--FK de tabla book
-    sttart datetime,
-    ennd datetime,
-    Indexbook_0, --Indice de book_id,
-    Indexxustomer_0 --Indice de customer_id
+CREATE TABLE borrowed_books (
+    customer_id INT(10),
+    book_id INT(10),
+    start DATETIME,
+    end DATETIME,
+    FOREIGN KEY(customer_id) REFERENCES customer(id) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY(book_id) REFERENCES book(id) ON UPDATE CASCADE ON DELETE CASCADE,
+    PRIMARY KEY(customer_id,book_id)
+) engine='Innodb';
 
-)engine="Imnodb"
-
+CREATE TABLE sale_book (
+    book_id INT(10),
+    sale_id INT(10),
+    amount SMALLINT(5),
+    FOREIGN KEY (book_id) REFERENCES book(id) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (sale_id) REFERENCES sale(id) ON UPDATE CASCADE ON DELETE CASCADE,
+    PRIMARY KEY (book_id, sale_id)
+) engine='Innodb';
