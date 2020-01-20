@@ -12,13 +12,29 @@
 <body>
 
     <?php 
+    if(isset($_POST['name']) && isset($_POST['lname'])){
+        if($_POST['name'] === $_POST['uname'] && isset($_POST['pass'])){
+            header('Location: login.php');
+        }
+        
+    }else{
         echo <<< HDR
         <div id="login-form">
         <form action="$_SERVER[PHP_SELF]" method="post">
             <table>
                 <tr>
                     <td>
-                        <input type="text" name="uname" placeholder="User Name" />
+                        <input type="text" name="name" placeholder="Name" require />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="lname" placeholder="Last Name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="uname" placeholder="User Name" require />
                     </td>
                 </tr>
                 <tr>
@@ -28,16 +44,20 @@
                 </tr>
                 <tr>
                     <td>
-                        <button type="submit" name="btn-signup">Sign Me Up</button>
+                        <button type="submit" name="btn-signup">Register</button>
                     </td>
                 </tr>
-
-
+        
+        
             </table>
         </form>
-    </div>
+        </div>
         
-HDR;
+        
+    HDR;
+        
+    }
+
         
     
     ?>

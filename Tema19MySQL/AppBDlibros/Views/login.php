@@ -12,32 +12,43 @@
 <body>
 
     <?php 
-        echo <<< HDR
-        <div id="login-form">
-        <form action="$_SERVER[PHP_SELF]" method="post">
-            <table>
-                <tr>
-                    <td>
-                        <input type="text" name="uname" placeholder="User Name" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="password" name="pass" placeholder="Your Password" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button type="submit" name="btn-signup">Sign Me Up</button>
-                    </td>
-                </tr>
-
-
-            </table>
-        </form>
-    </div>
-        
+        if (isset($_POST['uname']) && isset($_POST['pass'])){
+            if ($_POST['uname'] == 'juanfe' && $_POST['pass'] == '123456'){
+                $uname = $_POST['uname'];
+                //meterse en la sesion logueada para añadir libros etcetc
+                echo "Buenos dias $uname";
+            }else{
+                header('Location: register.php');
+            }
+        }else{
+            echo <<< HDR
+            <div id="login-form">
+            <form action="$_SERVER[PHP_SELF]" method="post">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" name="uname" placeholder="User Name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password" name="pass" placeholder="Your Password" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" name="btn-signup">Sign Me Up</button>
+                        </td>
+                    </tr>
+    
+    
+                </table>
+            </form>
+        </div>
+            
 HDR;
+
+        }
         
     
     ?>
