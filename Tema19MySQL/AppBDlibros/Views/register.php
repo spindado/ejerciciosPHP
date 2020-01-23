@@ -15,10 +15,16 @@
     if(isset($_POST['name']) && isset($_POST['lname'])){
         if($_POST['name'] === $_POST['uname'] && isset($_POST['pass'])){
             header('Location: login.php');
+        }else{
+            if($_POST['name'] != $_POST['uname'] ){
+                echo "El nombre tiene que coincidir con el user name";
+                header('Location: register');
+            }
         }
         
     }else{
         echo <<< HDR
+        <h1> SIGN UP </h1>
         <div id="login-form">
         <form action="$_SERVER[PHP_SELF]" method="post">
             <table>
@@ -43,8 +49,19 @@
                     </td>
                 </tr>
                 <tr>
+                            <td>
+                                <label for="">Register:</label><br>
+                                <label for="">Premium</label>
+                                <input type="radio" name="gender" class="radio">
+                                <label for="">Basic</label>
+                                <input type="radio" name="gender" class="radio">
+                            
+                            </td>
+            
+                        <tr>
+                <tr>
                     <td>
-                        <button type="submit" name="btn-signup">Register</button>
+                        <button type="submit" name="btn-signup">Sign UP</button>
                     </td>
                 </tr>
         
@@ -54,7 +71,7 @@
         </div>
         
         
-    HDR;
+HDR;
         
     }
 

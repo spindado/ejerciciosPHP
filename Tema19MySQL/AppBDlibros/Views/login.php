@@ -22,6 +22,8 @@
             }
         }else{
             echo <<< HDR
+            <h1> SIGN IN </h1>
+               
             <div id="login-form">
             <form action="$_SERVER[PHP_SELF]" method="post">
                 <table>
@@ -37,7 +39,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <button type="submit" name="btn-signup">Sign Me Up</button>
+                            <button class="btn-premium" type="submit" name="btn-signup">Sign Me Up</button>
                         </td>
                     </tr>
     
