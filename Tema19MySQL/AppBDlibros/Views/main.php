@@ -10,17 +10,28 @@
 </head>
 
 <body>
-    <div id="login-form">
+
+    <?php 
+    if(isset($_POST['btn-signupP']) || isset($_POST['btn-signupB'])){
+        if(isset($_POST['btn-signupP'])){
+            header('Location: login.php');
+        }else{
+            header('Location: loginB.php');
+        }
+        
+    }else{
+        echo <<< HDR
+        <div id="login-form">
         <form action="$_SERVER[PHP_SELF]" method="post">
             <table>
                 <tr>
                     <td>
-                        <button class="btn-premium" type="submit" name="btn-signup">Premium</button>
+                        <button class="btn-premium" type="submit" name="btn-signupP">Premium</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <button type="submit" name="btn-signup">Basic</button>
+                        <button type="submit" name="btn-signupB">Basic</button>
                     </td>
                 </tr>
 
@@ -28,7 +39,8 @@
             </table>
         </form>
     </div>
-    <?php 
+HDR;
+    }
     
     
     ?>

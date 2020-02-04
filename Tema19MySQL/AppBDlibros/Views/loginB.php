@@ -12,18 +12,17 @@
 <body>
 
     <?php 
-    session_start();
         if (isset($_POST['uname']) && isset($_POST['pass'])){
-            if ($_POST['uname'] == 'juanfe' && $_POST['pass'] == '123456'){
+            if ($_POST['uname'] == 'pepe' && $_POST['pass'] == '123'){
                 $uname = $_POST['uname'];
                 //meterse en la sesion logueada para añadir libros etcetc
-                header('Location: sesionP.php');
+                echo "Buenos dias $uname";
             }else{
                 header('Location: register.php');
             }
         }else{
             echo <<< HDR
-            <h1> SIGN IN PREMIUM </h1>
+            <h1> SIGN IN BASIC </h1>
                
             <div id="login-form">
             <form action="$_SERVER[PHP_SELF]" method="post">
@@ -40,7 +39,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <button class="btn-premium" type="submit" name="btn-signup">Sign Me Up</button>
+                            <button type="submit" name="btn-signup">Sign Me Up</button>
                         </td>
                     </tr>
     

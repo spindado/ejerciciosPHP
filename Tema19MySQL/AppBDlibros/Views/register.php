@@ -17,8 +17,8 @@
             header('Location: login.php');
         }else{
             if($_POST['name'] != $_POST['uname'] ){
-                echo "El nombre tiene que coincidir con el user name";
                 header('Location: register');
+                echo "El nombre tiene que coincidir con el user name";
             }
         }
         
@@ -30,7 +30,7 @@
             <table>
                 <tr>
                     <td>
-                        <input type="text" name="name" placeholder="Name" require />
+                        <input type="text" name="name" placeholder="Name" required />
                     </td>
                 </tr>
                 <tr>
@@ -40,7 +40,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" name="uname" placeholder="User Name" require />
+                        <input type="text" name="uname" placeholder="User Name" required />
                     </td>
                 </tr>
                 <tr>
