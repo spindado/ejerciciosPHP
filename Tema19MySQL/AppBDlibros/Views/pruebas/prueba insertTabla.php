@@ -10,6 +10,8 @@ if(isset($_POST['insert'])){
     $author = $_POST['author'];
     $id = rand(1,9999999999);
     $isbn = rand(1111111111111,9999999999999);
+    $stock = rand(1,100);
+    $price = rand(1,1000);
 
 
     try {
@@ -17,10 +19,11 @@ if(isset($_POST['insert'])){
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "INSERT INTO book (isbn, title, author, stock, price)
-    VALUES ('$isbn', '$title','$author','50','20')";
+    VALUES ('$isbn', '$title','$author','$stock','$price')";
     // use exec() because no results are returned
     $conn->exec($sql);
     echo "New record created successfully";
+    
     }
 catch(PDOException $e)
     {
