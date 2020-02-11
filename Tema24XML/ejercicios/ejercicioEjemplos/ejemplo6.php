@@ -7,7 +7,7 @@ include 'ejemplo.php';
 $xml = simplexml_load_string($xmlstr);
 
 foreach ($xml->xpath('//character') as $character) {
-    echo $character->name, 'played by ',$character->actor, '<br/>';
+    echo $character->name, ' played by ',$character->actor, '<br/>';
     
 }
 

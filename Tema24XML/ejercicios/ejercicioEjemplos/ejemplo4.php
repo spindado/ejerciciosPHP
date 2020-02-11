@@ -9,10 +9,10 @@ include 'ejemplo.php';
 $xml = simplexml_load_string($xmlstr);
 /**Accede a los nodos <rating> de la primera pelicula
  * Output the rating scale, too */
-foreach ($$xml->movie[0]->rating as $rating) {
+foreach ($xml->movie[0]->rating as $rating) {
     switch((string)$rating['type']){
         case 'thumbs':
-            echo $rating, ' thumbs up';
+            echo $rating, ' thumbs up ';
         break;
         case 'stars':
             echo $rating, ' stars';
