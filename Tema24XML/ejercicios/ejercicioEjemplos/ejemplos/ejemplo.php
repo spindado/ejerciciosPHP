@@ -11,7 +11,7 @@ $xmlstr = <<<XML
             </character>
             <character>
                 <name>Mr. Coder</name>
-                <actor>El Act&#211;r</actor>
+                <actor>El Actor</actor>
             </character>
         </characters>
         <plot>
