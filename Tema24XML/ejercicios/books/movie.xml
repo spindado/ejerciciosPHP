@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<movies>
+    <id>
+        <id0/>
+    </id>
+    <movie0>
+        <title>sello oscuro</title>
+        <cast>
+            <actor0>
+                <actor>pepe</actor>
+            </actor0>
+        </cast>
+    </movie0>
+    <id>
+        <id1/>
+    </id>
+    <movie1>
+        <title>sello oscuro</title>
+        <cast>
+            <actor1>
+                <actor>pepe</actor>
+            </actor1>
+        </cast>
+    </movie1>
+</movies>

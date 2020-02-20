@@ -14,27 +14,25 @@
             </cast>
         </movie1>
         <movie2>
-        
-        <id>2</id>
-        <name>Harry Potter y la camara secreta</name>
-        <cast>
-            <actor1>Daniel Radcliffe as Harry Potter</actor1>
-            <actor2>Emma Watson as Hermione</actor2>
-            <actor3>Rupert Grint as Ron</actor3>
-            <actor4>Richard Harris as Albus Dumbledore</actor4>
-            <actor5>Maggie Smith as Minerva Mcgonagall</actor5>
-        </cast>
-
+            <id>2</id>
+            <name>Harry Potter y la camara secreta</name>
+            <cast>
+                <actor1>Daniel Radcliffe as Harry Potter</actor1>
+                <actor2>Emma Watson as Hermione</actor2>
+                <actor3>Rupert Grint as Ron</actor3>
+                <actor4>Richard Harris as Albus Dumbledore</actor4>
+                <actor5>Maggie Smith as Minerva Mcgonagall</actor5>
+            </cast>
         </movie2>
         <movie3>
-        <id>3</id>
-        <name>The Witcher</name>
-        <cast>
-            <actor1>Henry Cavill as Geralt of rivia</actor1>
-            <actor2>Anya Chalotra as Yennefer</actor2>
-            <actor3>Freya Allan as Ciri</actor3>
-            <actor4>Joey Batey as Jaskier</actor4>
-        </cast>
+            <id>3</id>
+            <name>The Witcher</name>
+            <cast>
+                <actor1>Henry Cavill as Geralt of rivia</actor1>
+                <actor2>Anya Chalotra as Yennefer</actor2>
+                <actor3>Freya Allan as Ciri</actor3>
+                <actor4>Joey Batey as Jaskier</actor4>
+            </cast>
         </movie3>
     </movies>
 </movies_info>
