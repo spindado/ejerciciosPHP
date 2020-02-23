@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<root>
+  <name>GFG</name>
+  <subject>CS</subject>
+  <contact_info>
+    <city>Noida</city>
+    <state>UP</state>
+    <email>feedback@geeksforgeeks.org</email>
+  </contact_info>
+</root>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<root>
+    <libro>
+        <id>Libro1</id>
+        <isbn>24234</isbn>
+        <title>Eli</title>
+        <author>qeqeq</author>
+        <stock>1313</stock>
+        <price>1313</price>
+    </libro>
+    <libro>
+        <id>123</id>
+        <isbn>e</isbn>
+        <title>Harry Potter</title>
+        <author>qeqeq</author>
+        <stock>1313</stock>
+        <price>1313</price>
+    </libro>
+    <libro>
+        <id>123</id>
+        <isbn>e</isbn>
+        <title>Harry Potter</title>
+        <author>qeqeq</author>
+        <stock>1313</stock>
+        <price>1313</price>
+    </libro>
+    <libro>
+        <id>123</id>
+        <isbn>123</isbn>
+        <title>Titulo1</title>
+        <author>JKR</author>
+        <stock>1313</stock>
+        <price>1313</price>
+        <submit4>Enviar</submit4>
+    </libro>
+    <libro>
+        <id>123</id>
+        <isbn>123</isbn>
+        <title>Titulo1</title>
+        <author>Aitor Tilla</author>
+        <stock>1313</stock>
+        <price>9.99</price>
+    </libro>
+    <libro>
+        <id>131916536966945</id>
+        <isbn>456</isbn>
+        <title>Pepe</title>
+        <author>J. R. R. Tolkien</author>
+        <stock>3</stock>
+        <price>12.99</price>
+    </libro>
+</root>

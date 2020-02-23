@@ -1,0 +1,7 @@
+{
+    "db": "mysql:host=localhost",
+    "dsn": "mysql:dbname=bookstore_pilar;host=localhost",
+    "host": "host=localhost",
+    "user": "root",
+    "password": ""
+}

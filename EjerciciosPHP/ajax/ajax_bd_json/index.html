@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax con PHP y JSON</title>
+    <script>
+        window.addEventListener("load",inicio);
+        function inicio() {
+            document.getElementById("mostrar").addEventListener("click",mostrar);
+        }
+        function mostrar() {
+            console.log(document.getElementById("puntuacion").value);
+            var puntos = document.getElementById("puntuacion").value;
+            var objeto = {
+                "valor":parseInt(puntos)
+            };
+
+            var xhr = new XMLHttpRequest();
+            var txt = "";
+            xhr.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200) {
+                    var array = JSON.parse(this.responseText);
+                    for(x in array) {
+                        txt += array[x].alumno + " : " + array[x].puntuacion + "<br/>";
+                    }
+                    document.getElementById("texto").innerHTML = txt;
+                }
+            }
+            // Hacer la petición
+            var parametros = JSON.stringify(objeto);
+            /*xhr.open("GET", "./php.php?objeto="+parametros, true);
+            xhr.send();*/
+            xhr.open("POST", "./php.php", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("objeto="+parametros);
+        }
+    </script>
+</head>
+<body>
+    Puntuación:
+    <input type="number" id="puntuacion">
+    <button id="mostrar">Enviar</button>
+    <div id="texto"></div>
+</body>
+</html>
