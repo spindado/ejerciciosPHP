@@ -1,4 +1,4 @@
-<<?php 
+<?php 
     class MiCabecera{
         private $text;
 
